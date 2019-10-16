@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+REPO=walkero/docker4sharedance
+TAG=latest
+
+echo "------ HOOK START - BUILD -------"
+
+docker build -t $REPO:$TAG .
+
+echo "------ HOOK END - BUILD -------"
