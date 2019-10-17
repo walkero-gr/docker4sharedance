@@ -20,4 +20,6 @@ RUN curl -fSL "https://github.com/walkero-gr/docker4sharedance/raw/master/files/
     rm -rf /tmp/sharedance-0.6; \
     mkdir /docker-entrypoint-init.d; \
     touch /docker-entrypoint-init.d/sharedance_start.sh; \
-    printf "#\!/usr/bin/env bash\n/usr/local/sbin/sharedanced --directory=/tmp/sharedance --daemonize" > /docker-entrypoint-init.d/sharedance_start.sh
+    printf "#\!/usr/bin/env bash\nsudo /usr/local/sbin/sharedanced --directory=/tmp/sharedance --daemonize" > /docker-entrypoint-init.d/sharedance_start.sh
+
+USER wodby
