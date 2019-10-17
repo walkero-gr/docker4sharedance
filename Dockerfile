@@ -1,4 +1,5 @@
-FROM wodby/php:5.6-dev-macos
+ARG PHP_TAG
+FROM wodby/php:${PHP_TAG}
 
 LABEL maintainer="Georgios Sokianos <walkero@gmail.com>"
 
